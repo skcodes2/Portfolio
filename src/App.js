@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename = {"https://skcodes2.github.io/Portfolio"}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/aboutMe" element={<AboutMe />} />
