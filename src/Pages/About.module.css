@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto, sans-serif";
+
+
+}
+
+
+
+html,
+body {
+    overflow-y: auto;
+
+}
+
+body {
+    background-color: #111111;
+}
+
+
+.aboutMe_container {
+    z-index: -2;
+    overflow-y: auto;
+    background: url("../assets/file.png");
+    background-position: 70% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.aboutMe_container .cv {
+    top: 90%;
+    z-index: 10;
+    margin-left: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    font-weight: 500;
+    background-color: #F9D423;
+    color: black;
+    width: 150px;
+    border-radius: 20px;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.cv:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+.aboutMe_container p {
+    color: white;
+}
+
+
+
+.header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+.header_container h1 {
+    color: white;
+    font-weight: 300;
+
+}
+
+
+
+.header_para {
+    font-size: 0.5em;
+    max-width: 800px;
+    text-align: center;
+}
+
+.header_rec {
+    margin-top: 0.3rem;
+    height: 0.05em;
+    width: 7em;
+    background: #F9D423;
+}
+
+
+.content_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    padding: 1rem;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+
+}
+
+.content_container .img_frame {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content_container img {
+    display: block;
+    border: 6px solid #F9D423;
+    margin: 0 auto;
+    max-width: 70%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_container h2,
+.label {
+    color: white;
+}
+
+
+.about_container>h3:first-of-type {
+    font-size: 1em;
+}
+
+.about_container>h3:first-of-type,
+.about_container .value {
+    color: #F9D423;
+}
+
+.about_container p {
+    font-size: 0.6em;
+    line-height: 2.5rem;
+}
+
+
+.contact_info {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 0.5em;
+    padding: 1rem;
+
+}
+
+.contact_info .labels {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.contact_info .values {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-left: auto;
+}
+
+
+
+
+
+.skills {
+    background-image: url("../assets/skill-bg.jpg");
+    background-position: 60% 53%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.skills h1 {
+    color: white;
+    padding: 1rem;
+}
+
+.skills_container {
+    width: 70%;
+    height: 70%;
+    margin-top: 1%;
+    display: grid;
+    row-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skills_container>img {
+    display: block;
+    max-width: 30%;
+    justify-self: center;
+    min-height: 30%;
+
+
+}
+
+.skills_container>img:hover {
+    transform: scale(1.1);
+}
+
+.about_main footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+    background-color: black;
+}
+
+.about_main footer a {
+    color: white;
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.about_main footer p {
+    display: none;
+
+}
+
+.about_main footer p:first-of-type {
+    /* Add your styles here */
+    color: rgb(255, 208, 0);
+    top: 55%;
+    /* Example style */
+}
+
+.about_main footer a:hover {
+    color: #F9D423;
+}
+
+.about_main footer div {
+    display: flex;
+    justify-content: center;
+    color: #111111;
+    height: 100%;
+    width: 100%;
+}
+
+.about_main footer div a {
+    font-size: 1.5em;
+}
+
+.about_main footer div a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 420px) {
+    .content_container {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 731px) {
+
+    .skills_container>img {
+        max-width: 50%;
+    }
+
+    .aboutMe_container .cv {
+        margin-left: 3%;
+        margin-bottom: 1rem;
+    }
+
+    .header_para {
+        padding: 0.5rem;
+    }
+
+    .content_container img {
+        max-width: 90%;
+    }
+
+    .about_container {
+        margin-top: 2rem;
+    }
+}

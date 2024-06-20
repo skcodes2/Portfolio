@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    overflow: hidden;
+}
+
+.loading_screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.loading_name {
+    font-family: 'Lihataja', sans-serif;
+    font-size: 6rem;
+    color: white;
+    position: absolute;
+
+}
+
+#first_name {
+    position: absolute;
+    z-index: 1000;
+    right: 50%;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    width: 50%;
+    height: 100%;
+    top: -100%;
+    animation: moveName1 5s ease-out forwards 1s;
+    background-color: black;
+}
+
+#last_name {
+
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    padding-left: 1.5rem;
+    padding-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: #000000;
+    width: 50%;
+    height: 100%;
+    bottom: -100%;
+    animation: moveName2 5s ease-out backwards 1s;
+}
+
+.loading_screen.hidden {
+    display: none;
+}
+
+.loading_screen .show {
+    display: block;
+}
+
+@keyframes moveName1 {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+
+    }
+}
+
+@keyframes moveName2 {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+
+
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+
+.home_bg {
+    position: absolute;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: auto;
+    z-index: -1;
+
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    right: -100vw;
+    /* Start position outside of the viewport */
+    width: 100vw;
+
+    /* Width of the menu */
+    height: 100vh;
+    background-color: #000000;
+    transition: right 0.3s ease;
+    /* Transition for smooth sliding animation */
+}
+
+
+.menu.open {
+    right: 0;
+    /* Slide in from the right */
+}
+
+.menu a {
+    display: block;
+    position: absolute;
+    color: white;
+
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.open .signature {
+    font-family: 'Lihataja', sans-serif;
+    font-size: 3rem;
+    position: fixed;
+
+}
+
+
+
+.home {
+    top: 15%;
+
+}
+
+.education {
+    top: 30%;
+}
+
+.about {
+    top: 45%;
+}
+
+.projects {
+    top: 60%;
+}
+
+.open a:not(.signature):hover {
+    background-color: #555;
+    color: #F9D423;
+}
+
+.home nav {
+    position: fixed;
+    z-index: 3;
+    height: 30%;
+    width: 100%;
+    top: 2%;
+    padding: 2rem;
+
+}
+
+.signature:hover {
+    color: #F9D423;
+}
+
+@keyframes underlineAnimation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes retractAnimation {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+nav .navigation a:not(.signature) {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+nav .navigation a:not(.signature)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #F9D423;
+    transition: width 0.4s ease;
+    -webkit-transition: width 0.4s ease;
+}
+
+nav .navigation a:not(.signature):hover::after {
+    width: 100%;
+    left: 0;
+    background: #F9D423;
+    animation: underlineAnimation 0.4s forwards;
+}
+
+nav .navigation a:not(.signature):not(:hover)::after {
+    animation: retractAnimation 0.4s forwards;
+}
+
+.home_main section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+
+}
+
+section .landing_text h1 {
+    font-size: 4rem;
+    color: #ffffff;
+
+}
+
+section .landing_text {
+    font-family: 'CLeague Spartan,sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue';
+    position: relative;
+    font-weight: 700;
+    margin-top: 18vh;
+    left: 8%;
+    line-height: 9vh;
+}
+
+
+
+nav .navigation {
+    display: flex;
+    gap: 6rem;
+    justify-content: flex-end;
+
+}
+
+
+
+nav .navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: 'CLeague Spartan,sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue';
+    font-weight: 500;
+    height: 100%;
+}
+
+nav .navigation .signature {
+    height: auto;
+    font-family: 'Lihataja', sans-serif;
+    font-size: 3rem;
+    position: fixed;
+    left: 5%
+}
+
+
+
+
+nav .burger {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 90%;
+    height: 2rem;
+    width: 2rem;
+    max-width: 2rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+.burger.open .burger_Bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open .burger_Bar:nth-child(3) {
+    transform: rotate(55deg) translate(-9px, -7px);
+}
+
+.open .burger_Bar:hover {
+    background-color: #F9D423;
+}
+
+
+.burger_Bar {
+    width: 100%;
+    height: 0.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+
+
+.home_main footer {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 20%;
+    top: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_main footer a {
+    color: white;
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.home_main footer div {
+    display: none;
+}
+
+.home_main footer p {
+    position: absolute;
+    font-family: 'CLeague Spartan,sans-serif';
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    left: 97%;
+    top: 70%;
+
+}
+
+.home_main footer p:first-of-type {
+    /* Add your styles here */
+    color: rgb(255, 208, 0);
+    top: 55%;
+    /* Example style */
+}
+
+.home_main footer a:hover {
+    color: #F9D423;
+}
+
+
+.burger.open .burger_Bar:nth-child(1) {
+    transform: rotate(-50deg) translate(-7px, 7px);
+}
+
+
+
+.btns {
+    position: absolute;
+    left: 8%;
+    top: 57%;
+    border: none;
+    white-space: nowrap;
+}
+
+#work_btn {
+    position: absolute;
+    font-family: 'League Spartan,sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue';
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem;
+
+    height: 9.37vh;
+    border-radius: 0.8rem;
+    background-image: linear-gradient(to right, #FF4E50 0%, #F9D423 51%, #FF4E50 100%);
+
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: 2px solid black;
+
+}
+
+
+
+
+.landing_text>p {
+    font-size: 2rem;
+    width: 50%;
+    color: white;
+    margin-top: 0.5rem;
+    line-height: 2rem;
+    vertical-align: initial;
+    font-weight: 300;
+}
+
+#work_btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1024px) {
+
+
+
+    .loading_name {
+        font-size: 3.5rem;
+    }
+
+    nav .burger {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .navigation>*:not(.signature) {
+        display: none;
+    }
+
+    nav .navigation .signature {
+        font-size: 2.5rem;
+        z-index: -1;
+        white-space: nowrap;
+
+    }
+
+    .home_main footer p {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+
+
+
+    section .landing_text {
+        line-height: 5vh;
+    }
+
+    .navigation .signature {
+        font-size: 2rem;
+    }
+
+
+
+    section .landing_text h1 {
+        font-size: 3.2rem;
+        line-height: 5rem;
+    }
+
+    .index-module_type__E-SaG {
+        font-size: 3.2rem;
+
+    }
+
+    .landing_text span {
+        font-size: 3.2rem;
+    }
+
+    section .landing-text {
+        margin-top: 26vh;
+    }
+
+    .landing_text p {
+        margin-top: 2rem;
+        width: 80%;
+        font-size: 30px;
+    }
+}
