@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.95eee6b2.css",
-    "main.js": "/Portfolio/static/js/main.7bacd67b.js",
+    "main.js": "/Portfolio/static/js/main.3f060741.js",
     "static/media/file.png": "/Portfolio/static/media/file.8f0759be6cf15168579e.png",
     "static/media/background-about.jpg": "/Portfolio/static/media/background-about.5a5dc38e5489c1302e99.jpg",
     "static/media/landingbg.jpg": "/Portfolio/static/media/landingbg.b85a463f8e96cb176257.jpg",
@@ -9,6 +9,7 @@
     "static/media/algo.mp4": "/Portfolio/static/media/algo.8c8dcd7f47521b067f8e.mp4",
     "static/media/about-img.jpg": "/Portfolio/static/media/about-img.61d585bf074ea04b954f.jpg",
     "static/media/avatar.png": "/Portfolio/static/media/avatar.ab81af5b96b1b8cc1199.png",
+    "static/media/weather.png": "/Portfolio/static/media/weather.f19d2b2805ab2e4ff8ec.png",
     "static/media/engineria.png": "/Portfolio/static/media/engineria.b053c1a33515bd9e8467.png",
     "static/media/olli_img.png": "/Portfolio/static/media/olli_img.d1006725c976615fcab3.png",
     "static/media/viewer.png": "/Portfolio/static/media/viewer.dc8e89f102bd90b5d947.png",
@@ -24,6 +25,7 @@
     "static/media/builder.png": "/Portfolio/static/media/builder.77d42038803eb9874e2e.png",
     "static/media/aws.png": "/Portfolio/static/media/aws.0d108ee92e5a68658617.png",
     "static/media/pygame.png": "/Portfolio/static/media/pygame.0ffd0cd567d2883c3ef9.png",
+    "static/media/sass.png": "/Portfolio/static/media/sass.91714f748188b46f4e33.png",
     "static/media/python.png": "/Portfolio/static/media/python.6a5cbc319ab3ddf8ef92.png",
     "static/media/react.png": "/Portfolio/static/media/react.86c8d9eba03e29814d2a.png",
     "static/media/java.png": "/Portfolio/static/media/java.f4ea765878d6e68edefd.png",
@@ -34,15 +36,16 @@
     "static/media/c++.png": "/Portfolio/static/media/c++.24a8f93854ab092f17a7.png",
     "static/media/html-5.png": "/Portfolio/static/media/html-5.a92a549a591f4acb527a.png",
     "static/media/css.png": "/Portfolio/static/media/css.02d225c7df0b28341d8d.png",
+    "static/media/typescript.png": "/Portfolio/static/media/typescript.8e08c2165d60d7ca62a9.png",
     "static/media/js.png": "/Portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/fa-v4compatibility.ttf": "/Portfolio/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/Portfolio/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/Portfolio/index.html",
     "main.95eee6b2.css.map": "/Portfolio/static/css/main.95eee6b2.css.map",
-    "main.7bacd67b.js.map": "/Portfolio/static/js/main.7bacd67b.js.map"
+    "main.3f060741.js.map": "/Portfolio/static/js/main.3f060741.js.map"
   },
   "entrypoints": [
     "static/css/main.95eee6b2.css",
-    "static/js/main.7bacd67b.js"
+    "static/js/main.3f060741.js"
   ]
 }
